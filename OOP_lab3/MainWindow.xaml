@@ -1,0 +1,39 @@
+﻿<Window x:Class="OOP_lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOP_lab3"
+        xmlns:WindowsPresentation="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600" ResizeMode="NoResize">
+    <Grid Margin="243,0,2,4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1383*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="865*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <WindowsPresentation:GMapControl Name="Map" Loaded="MapLoaded" MouseLeftButtonDown="Map_MouseLeftButtonDown" Grid.ColumnSpan="1" Margin="0,0,4,0"/>
+        <RadioButton x:Name="radioButtonCreate" Content="создание объектов" HorizontalAlignment="Left" Margin="-225,25,0,0" VerticalAlignment="Top" Width="211" Height="15"/>
+        <RadioButton x:Name="radioButtonSearch" Content="поиск ближайших" HorizontalAlignment="Left" Margin="-225,45,0,0" VerticalAlignment="Top" Width="201" Height="15"/>
+        <Label x:Name="label" Content="Режим курсора" HorizontalAlignment="Left" Margin="-239,-2,0,0" VerticalAlignment="Top" Height="27" Width="119"/>
+        <Label x:Name="label1" Content="Добавить" HorizontalAlignment="Left" Margin="-226,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.524,0.231" Height="26" Width="79"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="-225,86,0,0" VerticalAlignment="Top" Width="202" SelectedIndex="0" Height="22">
+            <ComboBoxItem Content="Машина"/>
+            <ComboBoxItem Content="Место"/>
+            <ComboBoxItem Content="Челик"/>
+            <ComboBoxItem Content="Маршрут"/>
+            <ComboBoxItem Content="Область"/>
+        </ComboBox>
+        <Button x:Name="buttonAddOk" Content="OK" HorizontalAlignment="Left" Margin="-225,139,0,0" VerticalAlignment="Top" Width="201" Height="25" Click="ButtonAddOk_Click"/>
+        <Button x:Name="buttonAddCancel" Content="Сброс" HorizontalAlignment="Left" Margin="-225,169,0,0" VerticalAlignment="Top" Width="201" Height="25" Click="ButtonAddCancel_Click"/>
+        <TextBox x:Name="textBoxSearch" HorizontalAlignment="Left" Height="23" Margin="-226,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202"/>
+        <Button x:Name="buttonSearchOk" Content="ОК" HorizontalAlignment="Left" Margin="-226,227,0,0" VerticalAlignment="Top" Width="202" Height="25" Click="ButtonSearchOk_Click"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="515" Margin="-225,257,0,0" VerticalAlignment="Top" Width="201" MouseDoubleClick="ListBox_MouseDoubleClick"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="-225,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="202"/>
+        <Button x:Name="buttonCall" Content="Вызов" HorizontalAlignment="Left" Margin="-222,777,0,0" VerticalAlignment="Top" Width="198" Height="72" Click="ButtonCall_Click"/>
+    </Grid>
+</Window>
